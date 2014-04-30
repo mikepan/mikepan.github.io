@@ -61,7 +61,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 body{
-	background:#111;
+	background:#222;
 	font-family: "Helvetica Neue",  "Helvetica", "Arial", sans-serif;
 }
 
@@ -69,12 +69,12 @@ body{
 	position:absolute;
 }
 #centre{
-	padding:20px;
+	padding:10% 0px 10px 0px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 80%;
 	min-width: 350px;
 	max-width: 1450px;
+	/*width:90%;*/
 	background: #222;
 	text-align: center;
 }
@@ -147,7 +147,7 @@ footer{
 #aboot{
 	background: #322;
 	color:#655;
-	margin:20px -20px 20px -20px;
+	margin:20px;
 	padding:10px;
 	font-weight: 200;
 	font-size:14px;
