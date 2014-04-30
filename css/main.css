@@ -68,20 +68,24 @@ body{
 #beta{
 	position:absolute;
 }
+
 #centre{
-	padding:10% 0px 10px 0px;
+	padding:0px;
 	margin-left: auto;
 	margin-right: auto;
 	min-width: 350px;
 	max-width: 1450px;
-	background: #222;
 	text-align: center;
+	margin-top:-100px;
 }
 
 header{
 	font-weight:100;
 	font-size: 20px;
 	letter-spacing: 6px;
+	position: relative;
+	top:-50px;
+	text-shadow: 0px 0px 20px #fff;
 }
 
 
@@ -90,18 +94,33 @@ header{
 }
 
 #headerPan{
-	color:#EEE;
+	color:#FFF;
 }
 
 #headerSub{
 	font-size: 14px;
 	letter-spacing: 10px;
-	color:#999;
+	color:rgba(255,255,255,0.9);
 
 }
 
 #headerHR{
-	border-top: 1px solid #333;
+	border-top: 1px solid rgba(255,255,255,0.1);
+	margin-left:5%;
+	margin-right:5%;
+}
+
+#arrow{
+	font-size:40px;
+	color:rgba(255,255,255,0.9);
+}
+
+#splash{
+	height:60vh;
+	background-image: url('../content/bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-shadow: 0px 10px 30px 0px #000;
 }
 
 #main{
@@ -115,13 +134,11 @@ header{
 	font-weight:100;
 	font-size:12px;
 	letter-spacing: 1px;
-	margin:25px 3% 25px 3%;
+	margin:25px 1% 25px 1%;
 	background: #111;
 	border-radius: 5px;
 	padding-top:10px;
 	box-shadow: 0px 10px 50px -5px #111;
-	width:300px;
-	height:200px;
 }
 
 #main .grid:hover{
@@ -146,21 +163,21 @@ footer{
 #aboot{
 	background: #322;
 	color:#655;
-	margin:20px;
+	margin:5%;
 	padding:10px;
 	font-weight: 200;
 	font-size:14px;
 }
 
 #aboot #left{
-	display:none;
+	/*display:none;*/
 	width:30%;
 	min-width:100px;
 	float:left;
 }
 
 #aboot #right{
-	display:none;
+	/*display:none;*/
 	width:70%;
 	min-width:400px;
 	float:right;
