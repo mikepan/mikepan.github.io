@@ -1,6 +1,83 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Landing Soon</h1>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Mike Pan: Portfolio</title>
+		<meta name="description" content="Portfolio for Mike Pan, contains CG artwork, photos and codes.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/normalize.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+	</head>
+	<body>
+		<div id='centre'>
+		<header>
+			<span id='headerMike'>Mike</span> <span id='headerPan'>Pan</span> 
+			<span id='headerSub'>• Digital Portfolio</span>
+			<hr id='headerHR'/>
+		</header>
+
+		<section id='main'>
+			<div class="grid"> Cube Experiment <div id="cube" class="preview"></div></div>
+			<div class="grid"> BMW 1 Series M <div id="bmw" class="preview"></div></div>
+			<div class="grid"> Underwater Marine Visualization <div id="fisheries" class="preview"></div></div>
+			<div class="grid"> Molecular Flipbook <div id="mfb" class="preview"></div></div>
+			<div class="grid"> BioBlender <div id="bioblender" class="preview"></div></div>
+			<div class="grid"> Blender Game Development Book <div id="book" class="preview"></div></div>
+
+
+
+		</section>
+
+		<section id='aboot'>
+
+			<div id='left'>
+				blah
+
+			</div>
+
+			<div id='right'>
+				<p>Mike dabbles in 3D art-making, programming, book-writing and photography.</p>
+
+				<p>With 12 years of Blender experience under his belt and a keen interest in scientific visualization, he has worked for the University of British Columbia in Canada, Institute of Clinical Physiology in Italy, and Harvard Medical School.</p>
+
+			</div>
+
+			<div style='clear:both'></div>
+
+		</section>
+
+		<footer> Mike Pan | Vancouver, Canada | 2014</footer>
+		</div>
+	
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.slideview.js"></script>
+
+
+	<script type="text/javascript">
+		var images = {
+			bmw:['BMW0.jpg', 'BMW1.jpg', 'BMW2.jpg', 'BMW3.jpg', 'BMW4.jpg'],
+			fisheries:['Ocean0.jpg', 'Ocean1.jpg', 'Ocean2.jpg', 'Ocean3.jpg', 'Ocean4.jpg'],
+			mfb:['mfb0.jpg', 'mfb1.jpg', 'mfb2.jpg', 'mfb3.jpg', 'mfb4.jpg'],
+			cube:['cube1.jpg', 'cube2.jpg', 'cube3.jpg', 'cube4.jpg', 'cube5.jpg', 'cube6.jpg', 'cube7.jpg', 'cube8.jpg'],
+			book:['book0.jpg', 'book1.jpg', 'book2.jpg', 'book3.jpg', 'book4.jpg', 'book5.jpg'],
+			bioblender:['BB0.jpg', 'BB1.jpg', 'BB2.jpg', 'BB3.jpg'],
+
+		}
+		$('.preview').slideview(function(e){return images[e.id];}, { size: [300,200]} );
+	</script>
+
+
+	<!--
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-50473962-1', 'mikepan.com');
+		ga('send', 'pageview');
+	</script>
+	-->
+
+	</body>
 </html>
