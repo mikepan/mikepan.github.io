@@ -20,14 +20,19 @@
 				.addClass('slideview-slide').appendTo($container);
 		}
 		
-		$viewport.bind('mousemove.slideview', function(evt) {
+		// $viewport.bind('mousemove.slideview', function(evt) {
+		// 	x = evt.pageX - this.offsetLeft;
+		// 	offset = Math.floor(x / (size[0] / slides.length)) * size[0];
+		// 	$(this).animate({ scrollLeft: offset }, 0);
+		// 	return false;
+		// });
+
+		$viewport.on({'mousemove touchmove': function(evt) {
 			x = evt.pageX - this.offsetLeft;
 			offset = Math.floor(x / (size[0] / slides.length)) * size[0];
 			$(this).animate({ scrollLeft: offset }, 0);
 			return false;
-		});
+		}})
 	}
 	
 })(jQuery);
-
-image-set
