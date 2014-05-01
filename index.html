@@ -8,39 +8,44 @@
 		<link rel="stylesheet" href="css/normalize.min.css">
 		<link rel="stylesheet" href="css/main.css">
 		<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+		<!-- TODO: Use webfonts -->
 	</head>
 	<body>
-		<div id='skrollr-body'>
-
 		<div id='splash' data-0="height:100vh" data-500="height:20vh"></div>
 
 		<div id='centre'>
 
-			<header>
+			<header data-start="top:-10px" data-600="top:150px">
 				<span id='headerMike'>Mike</span> <span id='headerPan'>Pan</span> 
-				<span id='headerSub'>&nbsp;• Portfolio</span>
+				<span id='headerSub'>&nbsp;• Portfolio</span>    <!-- one space to center dot with arrow -->
 				<hr id='faintHR'/>
-				<span id='arrow' data-100="opacity:1" data-200="opacity:0">⇣</span>
+				<span id='arrow' data-0="opacity:1" data-150="opacity:0">⇣</span>
 			</header>
 
 			<section id='main' data-start="padding-top:400px;" data-600="padding-top:-200px">
-				<div class="grid"> Cube Experiment <div id="cube" class="preview"></div></div>
-				<div class="grid"> BMW 1 Series M <div id="bmw" class="preview"></div></div>
-				<div class="grid"> Underwater Marine Visualization <div id="fisheries" class="preview"></div></div>
-				<div class="grid"> Molecular Flipbook <div id="mfb" class="preview"></div></div>
-				<div class="grid"> BioBlender <div id="bioblender" class="preview"></div></div>
-				<div class="grid"> Blender Game Development Book <div id="book" class="preview"></div></div>
+				<div class="grid">Personal<!--  (2014) --><div id="cube" class="preview"></div>The Cube Experiment</div>
+				<div class="grid">Personal<!--  (2013) --> <div id="bmw" class="preview"></div>BMW 1 Series M</div>
+				<div class="grid">For Harvard + University of Utah <!-- (2011-2014) --><div id="mfb" class="preview"></div>Molecular Flipbook</div>
+				<div class="grid">For University of British Columbia <!-- (2008-2011) --><div id="fisheries" class="preview"></div>Underwater Marine Visualization</div>
+				<div class="grid">For Institute of Clinical Physiology <!-- (2010) --> <div id="bioblender" class="preview"></div>BioBlender</div>
+				<div class="grid">Author<!--  (2012)  --><div id="book" class="preview"></div>Game Development With Blender Book</div>
 			</section>
+
 
 			<section id='aboot'>
 
-				<div id='left'>
-					About Me
+				<div id='right'>
+				<ul>
+				<li><a href="http://blog.mikepan.com">My Blog</a></li>
+				<li><a href="http://github.com/mikepan">GitHub</a></li>
+				<li><a href="http://twitter.com/themikepan">Twitter</a></li>
+				<li><a href="http://vimeo.com/mikepan">Vimeo</a></li>
+				<!-- <li><a href="http://youtube.com/mpan3">Youtube</a></li> -->
+				</ul>
 				</div>
 
-				<div id='right'>
-					<p>Mike dabbles in 3D art-making, programming, book-writing and photography.</p>
-
+				<div id='cen'>
+					<p>Mike dabbles in 3D art, programming, game-making, book-writing and photography.</p>
 					<p>With 12 years of Blender experience and a keen interest in scientific visualization, he has worked for the University of British Columbia in Canada, Institute of Clinical Physiology in Italy, and Harvard Medical School.</p>
 				</div>
 
@@ -52,11 +57,9 @@
 				<hr id='faintHR'/>
 				Mike Pan | Vancouver, Canada | 2014
 				<hr id='faintHR'/>
-
 			</footer>
 
-		</div> <!-- center -->
-		</div>
+		</div> <!-- end center -->
 	
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="js/jquery.slideview.js"></script>
@@ -69,9 +72,8 @@
 				cube:['cube1.jpg', 'cube2.jpg', 'cube3.jpg', 'cube4.jpg', 'cube5.jpg', 'cube6.jpg', 'cube7.jpg', 'cube8.jpg'],
 				book:['book0.jpg', 'book1.jpg', 'book2.jpg', 'book3.jpg', 'book4.jpg', 'book5.jpg'],
 				bioblender:['BB0.jpg', 'BB1.jpg', 'BB2.jpg', 'BB3.jpg'],
-
 			}
-			$('.preview').slideview(function(e){return images[e.id];}, { size: [450,300]} );
+			$('.preview').slideview(function(e){return images[e.id];}, { size: [450,260]} );
 		</script>
 
 		<script type="text/javascript" src="js/skrollr.min.js"></script>
