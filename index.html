@@ -11,34 +11,28 @@
 	</head>
 	<body>
 		<div id='skrollr-body'>
-		<img id='beta' src="content/beta.png">
 
-		<div id='splash' data-0="height:100vh" data-200="height:0vh"></div>
+		<div id='splash' data-0="height:100vh" data-500="height:20vh"></div>
 
 		<div id='centre'>
 
 			<header>
 				<span id='headerMike'>Mike</span> <span id='headerPan'>Pan</span> 
-				<span id='headerSub'>• Portfolio</span>
-				<hr id='headerHR'/>
-				<span id='arrow'>⇣</span>
-
+				<span id='headerSub'>&nbsp;• Portfolio</span>
+				<hr id='faintHR'/>
+				<span id='arrow' data-100="opacity:1" data-200="opacity:0">⇣</span>
 			</header>
 
-			<section id='main'>
+			<section id='main' data-start="padding-top:400px;" data-600="padding-top:-200px">
 				<div class="grid"> Cube Experiment <div id="cube" class="preview"></div></div>
 				<div class="grid"> BMW 1 Series M <div id="bmw" class="preview"></div></div>
 				<div class="grid"> Underwater Marine Visualization <div id="fisheries" class="preview"></div></div>
 				<div class="grid"> Molecular Flipbook <div id="mfb" class="preview"></div></div>
 				<div class="grid"> BioBlender <div id="bioblender" class="preview"></div></div>
 				<div class="grid"> Blender Game Development Book <div id="book" class="preview"></div></div>
-				<div class="grid"> Cube Experiment <div id="cube" class="preview"></div></div>
-				<div class="grid"> Cube Experiment <div id="cube" class="preview"></div></div>
-				<div class="grid"> Cube Experiment <div id="cube" class="preview"></div></div>
-
 			</section>
 
-			<section id='aboot'>
+			<section id='aboot' style='display:none'>
 
 				<div id='left'>
 					blah
@@ -55,7 +49,7 @@
 			</section>
 
 			<footer>
-				<hr id='headerHR'/>
+				<hr id='faintHR'/>
 				Mike Pan | Vancouver, Canada | 2014
 			</footer>
 
@@ -80,7 +74,9 @@
 
 		<script type="text/javascript" src="js/skrollr.min.js"></script>
 		<script type="text/javascript">
-			var s = skrollr.init(forceHeight=false);
+			if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+				skrollr.init({forceHeight:false});
+			}
 		</script>
 
 		<!--

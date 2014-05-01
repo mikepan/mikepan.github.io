@@ -20,7 +20,7 @@
 				.addClass('slideview-slide').appendTo($container);
 		}
 
-		$viewport.on({'mousemove': function(evt) {
+		$viewport.on({'mousemove.slideview': function(evt) {
 			x = evt.pageX - this.offsetLeft;
 			offset = Math.floor(x / (size[0] / slides.length)) * size[0];
 			$(this).animate({ scrollLeft: offset }, 0);
