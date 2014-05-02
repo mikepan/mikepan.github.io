@@ -65,7 +65,7 @@ body{
 	font-family: "Helvetica Neue",  "Helvetica", "Arial", sans-serif;
 }
 
-#splash{
+.splash{
 	height:30vh;
 	background-image: url('../content/bg.jpg');
 	background-size: cover;
@@ -93,6 +93,16 @@ header{
 	text-shadow: 0px 0px 20px #024;
 }
 
+header a{
+	text-decoration: none;
+}
+
+header a:hover{
+	color:#476;
+	border-radius: 50px;
+	text-shadow: 0 0 5px white;
+	padding:15px;
+}
 
 #headerMike{
 	color:#F00;
@@ -202,6 +212,61 @@ footer{
 
 #aboot a:hover{
 	color:#479;
+}
+
+/* ==========================================================================
+   Secondary pages
+   ========================================================================== */
+
+#splashCube{
+	background-image: url('../content/cubes/banner.jpg');
+}
+
+article{
+	margin:auto;
+	margin-top:100px;
+	max-width: 940px;
+	padding:10px;
+	color: #777;
+	font-weight:200;
+	font-size:18px;
+	text-align: justify;
+	max-height: 100000px;
+	/*border: 1px solid red;*/
+}
+
+article h3{
+	padding:20px;
+	font-family: "Helvetica Neue",  "Helvetica", "Arial", sans-serif;
+	letter-spacing: 1px;
+	font-weight:100;
+	font-size:22px;
+	line-height: 60px;
+	text-align: center;
+	color:#888;
+}
+
+
+article img{
+	width:100%;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+article a{
+	color:#79a;
+	text-decoration: none;
+}
+
+article a:hover{
+	color:#fff;
+	text-decoration: none;
+}
+
+article #flourish{
+	text-align: center;
+	font-size:32px;
+	opacity:0.4;
 }
 /* ==========================================================================
    Media Queries
