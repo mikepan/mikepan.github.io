@@ -223,6 +223,9 @@ footer{
 	box-shadow: 0px 10px 30px 0px #111;
 }
 
+#splashFlipbook{
+	background-image: url('../content/mfb/banner.jpg');
+}
 
 
 article{
@@ -230,9 +233,9 @@ article{
 	margin-top:100px;
 	max-width: 940px;
 	padding:10px;
-	color: #777;
+	color: #888;
 	font-weight:200;
-	font-size:18px;
+	font-size:16px;
 	text-align: justify;
 	max-height: 100000px;
 	/*border: 1px solid red;*/
@@ -246,7 +249,7 @@ article h3{
 	font-size:22px;
 	line-height: 60px;
 	text-align: center;
-	color:#888;
+	color:#aaa;
 }
 
 
@@ -254,6 +257,8 @@ article img{
 	width:100%;
 	margin-top:30px;
 	margin-bottom:30px;
+	border-radius: 5px;
+	box-shadow: 0 0 100px #000;
 }
 
 article a{
