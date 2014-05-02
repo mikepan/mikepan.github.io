@@ -218,9 +218,16 @@ footer{
    Secondary pages
    ========================================================================== */
 
-#splashCube{
+#splashSmall{
+	height:30vh;
 	background-image: url('../content/cubes/banner.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position:center;
+	box-shadow: 0px 10px 30px 0px #000;
 }
+
+
 
 article{
 	margin:auto;
