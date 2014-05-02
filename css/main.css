@@ -66,7 +66,7 @@ body{
 }
 
 .splash{
-	height:30vh;
+	height:400px;
 	background-image: url('../content/bg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -218,12 +218,8 @@ footer{
    Secondary pages
    ========================================================================== */
 
-#splashCubes{
-	height:450px;
+#splashCube{
 	background-image: url('../content/cubes/banner.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position:center;
 	box-shadow: 0px 10px 30px 0px #111;
 }
 
