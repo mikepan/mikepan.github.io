@@ -1,2 +1,5 @@
 _site/
 offline
+*.sublime-workspace
+
+*.sublime-workspace

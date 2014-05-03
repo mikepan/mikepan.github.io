@@ -227,6 +227,13 @@ footer{
 	background-image: url('../content/mfb/banner.jpg');
 }
 
+#splashBMW{
+	background-image: url('../content/bmw/banner.jpg');
+}
+
+#splashOcean{
+	background-image: url('../content/oceanviz/banner.jpg');
+}
 
 article{
 	margin:auto;
@@ -257,7 +264,7 @@ article img{
 	width:100%;
 	margin-top:30px;
 	margin-bottom:30px;
-	border-radius: 5px;
+	border-radius: 7px;
 	box-shadow: 0 0 100px #000;
 }
 
@@ -266,10 +273,18 @@ article a{
 	text-decoration: none;
 }
 
+
 article a:hover{
 	color:#fff;
 	text-decoration: none;
 }
+
+article .spotlight{
+	color:#79a;
+	text-decoration: none;
+	text-align: center;
+}
+
 
 article #flourish{
 	text-align: center;
