@@ -125,7 +125,7 @@ header a:hover{
 }
 
 
-#faintHR{
+.faintHR{
 	border-top: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -157,7 +157,7 @@ header a:hover{
 }
 
 #main .grid:hover{
-	/*box-shadow: 0px 0px 5px 0px #0cf;*/
+	box-shadow: 0px 0px 5px 0px #0cf;
 }
 
 footer{
