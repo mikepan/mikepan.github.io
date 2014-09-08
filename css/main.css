@@ -171,7 +171,7 @@ footer{
 
 #aboot{
 	background: #322;
-	color:#655;
+	color:#877;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:20px;
@@ -180,7 +180,7 @@ footer{
 	font-size:15px;
 	max-width: 900px;
 	min-width: 400px;
-	border-radius: 0 5px 0px 5px;
+	border-radius: 0 10px 0px 10px;
 	max-height: 999999px;  /* prevent font boosting on mobile*/
 }
 
@@ -206,7 +206,7 @@ footer{
 }
 
 #aboot a{
-	color:#655;
+	color:#877;
 	text-decoration: none;
 }
 
