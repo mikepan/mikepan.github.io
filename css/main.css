@@ -236,11 +236,8 @@ footer{
 	background-image: url('../content/oceanviz/banner.jpg');
 }
 
-#splashSiggy{
-	/*background-image: url('../content/siggraph/banner.jpg');*/
-	background: #d5cea6;
-	background: linear-gradient(to bottom, #68a 0%,#024 100%);
-	height:200px;
+#splashNSX{
+	background-image: url('../content/nsx/banner.jpg');
 }
 
 
