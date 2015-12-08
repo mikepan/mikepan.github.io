@@ -240,6 +240,10 @@ footer{
 	background-image: url('../content/nsx/banner.jpg');
 }
 
+#splashTotalSim{
+	background-image: url('../content/totalSim/banner.jpg');
+}
+
 
 article{
 	margin:auto;

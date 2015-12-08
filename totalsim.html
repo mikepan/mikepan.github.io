@@ -11,7 +11,7 @@
 		<!-- TODO: Use webfonts -->
 	</head>
 	<body>
-		<div class='splash' id='splashNSX'></div>
+		<div class='splash' id='splashTotalSim'></div>
 
 		<div id='centre'>
 
@@ -24,36 +24,34 @@
 			</header>
 
 			<article>
-				<h3>Acura NSX Aerodynamics Film</h3>
+				<h3>Bike Race</h3>
+				<p>For this project I was only provided the bike models and had to create and deliver a photorealistic environment to go with the bikes.</p>
 
-				<p>When Honda was designing the new Acura NSX, they needed a way to present the aero design of the car in a visually pleasing and understandable way. I was lucky enough to be part of that process.</p>
+				<p>I started with a dark 'studio' environment but the client decided on a more realistic environment. So I got to work recreating a french countryside backdrop.</p>
 
-				<p>I developed the overall 'look' for the animation. Starting with the materials for the vehicle, then the background, and finally the lighting and visual effects, the process took 3 weeks. It was challenging to design a car paint that is faithful to the pearlescent red of the new NSX  while making it look good in an all-white backdrop.</p>
+				<img src='content/totalsim/3.jpg'>
 
-				<p>The finished animation can be seen on the <a href="http://nsx.acura.com">Acura NSX</a> homgepage.</p>
-
-				<img src='content/nsx/slipstream.jpg'>
-
-				<p>The goal of the animation is to showcase how the design maximizes all 3 targets at the same time:
+				<p>A lot of the time was spent on creating all vegetations that scatter the landscape, including: 
 				<ul>
-				<li>Cooling</li>
-				<li>Reduce Drag</li>
-				<li>Increase Downforce</li>
+				<li>3 Grass layers</li>
+				<li>4 Weed layers</li>
+				<li>2 Flower layers</li>
 				</ul>
+
+				The challenge is to create enough variety in the distribution of the vegations so that the landscape doesn't look artificial. Creating material for all the vegatation was also tricky as they need to look good in all lighting conditions, especially with the sun at a low angle.
 				</p>
+				
+				<img src='content/totalsim/1.jpg'>
+				
+				<p>This scene pushed the limit of GPU rendering on my 4GB GTX770. It had trouble fitting all the grass and cyclists(instanced) into graphic memory for fast rendering. In the end, particle numbers were reduced for preview rendering, with final rendering done on the CPU.</p>
+
+				<p>
+				The focus of the project is delivering a photo-realistic rendering of the scene in the most flattering lighting possible. Using Blender and Cycles Renderer allowed me to rapidly setup complex nodal materials as well as experimenting with lighting setups.</p>
+
+				<img src='content/totalsim/2.jpg'>
+			
 
 
-				<p>All the aerodynamics simulation data was supplied. Furthermore, as an external consultant, I had no access to the actual geometry of the vehicle, a pipeline had to be setup where a proxy geometry is used by me, to be replaced by the real geometry once I deliver the render-ready scene.</p>
-				
-				<img src='content/nsx/rotor.jpg'>
-				
-				The focus of the project is delivering a photo-realistic rendering of the car in the most flattering lighting possible. Using Blender and Cycles Renderer allowed me to rapidly setup complex nodal materials as well as experimenting with lighting setups.
-
-				<img src='content/nsx/front.jpg'>
-				
-				<img src='content/nsx/back.jpg'>
-				
-				<img src='content/nsx/streamline.jpg'>
 			
 				
 			<div id='flourish'>※</div>
