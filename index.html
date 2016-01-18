@@ -11,7 +11,7 @@
 		<!-- TODO: Use webfonts -->
 	</head>
 	<body>
-		<div class='splash' data-0="height:100vh" data-500="height:20vh"></div>
+		<div class='splash' data-0="height:20vh" data-500="height:10vh"></div>
 
 		<div id='centre'>
 
@@ -24,6 +24,14 @@
 
 			<section id='main' data-start="padding-top:400px;" data-600="padding-top:-200px">
 				
+				<a href="bikes.html">
+					<div class="grid">
+						For TotalSim<!--  (2014) -->
+						<div id="bikes" class="preview"></div>
+						Peloton Aerodynamics Visualization
+					</div>
+				</a>
+
 				<a href="cubes.html">
 					<div class="grid">
 						Personal<!--  (2014) -->
@@ -98,7 +106,7 @@
 
 			<footer>
 				<hr class='faintHR'/>
-				Mike Pan | Vancouver, Canada | 2015
+				Mike Pan | Vancouver, Canada | 2016
 				<hr class='faintHR'/>
 			</footer>
 
@@ -109,6 +117,7 @@
 
 		<script type="text/javascript">
 			var images = {
+				bikes:['bike1.jpg', 'bike2.jpg', 'bike3.jpg'],
 				bmw:['BMW0.jpg', 'BMW1.jpg', 'BMW2.jpg', 'BMW3.jpg', 'BMW4.jpg'],
 				fisheries:['Ocean0.jpg', 'Ocean1.jpg', 'Ocean2.jpg', 'Ocean3.jpg', 'Ocean4.jpg'],
 				mfb:['mfb0.jpg', 'mfb1.jpg', 'mfb2.jpg', 'mfb3.jpg', 'mfb4.jpg'],
@@ -119,18 +128,6 @@
 			$('.preview').slideview(function(e){return images[e.id];}, { size: [450,260]} );
 		</script>
 
-		<script type="text/javascript" src="js/skrollr.min.js"></script>
-		<script type="text/javascript">
-			if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-				skrollr.init({forceHeight:false});
-			}
-		</script>
-
-		<script type="text/javascript">
-			function scrollAnimated(){
-				$('html, body').animate({ scrollTop:"300px" });
-			}
-		</script>
 		
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
