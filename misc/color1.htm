@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive RGB Sliders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .interactive-content {
+            background-color: #f0f0f088;
+            padding: 40px;
+            border: 1px solid #ffffff88;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 400px;
+            height: 20px;
+            border-radius: 10px;
+            background: rgb(255, 255, 255);
+            margin: 10px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgb(255, 255, 255);
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+        .slider-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .slider-container label {
+            width: 30px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .slider-container span {
+            display: inline-block;
+            width: 50px;
+            text-align: right;
+            font-size: 18px;
+        }
+        label[for="red"] {
+            color: red;
+        }
+        label[for="green"] {
+            color: green;
+        }
+        label[for="blue"] {
+            color: blue;
+        }
+        input#red {
+            background: linear-gradient(to right, black, red);
+        }
+        input#green {
+            background: linear-gradient(to right, black, green);
+        }
+        input#blue {
+            background: linear-gradient(to right, black, blue);
+        }
+        input#intensity {
+            background: linear-gradient(to right, black, white);
+        }
+    </style>
+</head>
+<body>
+    <div class="interactive-content">
+        <div class="slider-container">
+            <label for="red">R</label>
+            <input id="red" type="range" min="0" max="1" step="0.01" value="1">
+            <span id="red-value">1.00</span>
+        </div>
+        <div class="slider-container">
+            <label for="green">G</label>
+            <input id="green" type="range" min="0" max="1" step="0.01" value="0.33">
+            <span id="green-value">0.00</span>
+        </div>
+        <div class="slider-container">
+            <label for="blue">B</label>
+            <input id="blue" type="range" min="0" max="1" step="0.01" value="0">
+            <span id="blue-value">0.00</span>
+        </div>
+
+        <div class="slider-container">
+            <label for="intensity">I</label>
+            <input id="intensity" type="range" min="0" max="5" step="0.01" value="1">
+            <span id="intensity-value">1.00</span>
+        </div>
+    </div>
+
+    <script>
+        const redSlider = document.getElementById('red');
+        const greenSlider = document.getElementById('green');
+        const blueSlider = document.getElementById('blue');
+        const intensitySlider = document.getElementById('intensity');
+
+        const redValue = document.getElementById('red-value');
+        const greenValue = document.getElementById('green-value');
+        const blueValue = document.getElementById('blue-value');
+        const intensityValue = document.getElementById('intensity-value');
+
+        let baseRed = parseFloat(redSlider.value);
+        let baseGreen = parseFloat(greenSlider.value);
+        let baseBlue = parseFloat(blueSlider.value);
+
+        function updatePreview() {
+            const intensity = parseFloat(intensitySlider.value);
+            const r = (baseRed * intensity).toFixed(2);
+            const g = (baseGreen * intensity).toFixed(2);
+            const b = (baseBlue * intensity).toFixed(2);
+
+            redValue.textContent = r;
+            greenValue.textContent = g;
+            blueValue.textContent = b;
+            intensityValue.textContent = intensity.toFixed(2);
+
+            document.body.style.backgroundColor = `rgb(${Math.min(r * 255, 255)}, ${Math.min(g * 255, 255)}, ${Math.min(b * 255, 255)})`;
+        }
+
+        function updateRGBSliders() {
+            const intensity = parseFloat(intensitySlider.value);
+            redSlider.value = (baseRed * intensity).toFixed(2);
+            greenSlider.value = (baseGreen * intensity).toFixed(2);
+            blueSlider.value = (baseBlue * intensity).toFixed(2);
+
+            redValue.textContent = redSlider.value;
+            greenValue.textContent = greenSlider.value;
+            blueValue.textContent = blueSlider.value;
+
+            updatePreview();
+        }
+
+        redSlider.addEventListener('input', () => {
+            baseRed = parseFloat(redSlider.value);
+            updatePreview();
+        });
+
+        greenSlider.addEventListener('input', () => {
+            baseGreen = parseFloat(greenSlider.value);
+            updatePreview();
+        });
+
+        blueSlider.addEventListener('input', () => {
+            baseBlue = parseFloat(blueSlider.value);
+            updatePreview();
+        });
+
+        intensitySlider.addEventListener('input', updateRGBSliders);
+
+        // Initialize preview color
+        updatePreview();
+    </script>
+</body>
+</html>
